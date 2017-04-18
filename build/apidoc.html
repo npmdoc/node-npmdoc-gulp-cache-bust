@@ -61,12 +61,82 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-cache-bust">module gulp-cache-bust</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cache-bust.gulp-cache-bust">
+            function <span class="apidocSignatureSpan"></span>gulp-cache-bust
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-cache-bust" id="apidoc.module.gulp-cache-bust">module gulp-cache-bust</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-cache-bust.gulp-cache-bust" id="apidoc.element.gulp-cache-bust.gulp-cache-bust">
+        function <span class="apidocSignatureSpan"></span>gulp-cache-bust
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-cache-bust = function (options) {
+	if(!options){
+		options = {};
+	}
+	return map(function (file, cb) {
+		if (file.isNull()) {
+			return cb(null, file);
+		}
+
+		if (file.isStream()) {
+			return cb(new gutil.PluginError(&#x27;gulp-cachebust&#x27;, &#x27;Streaming not supported&#x27;));
+		}
+		if(!options.basePath){
+			options.basePath = path.dirname(path.resolve(file.path))+&#x27;/&#x27;;
+		}
+
+		tempWrite(file.contents, path.extname(file.path))
+		.then(function (tempFile, err) {
+			if (err) {
+				return cb(new gutil.PluginError(&#x27;gulp-cachebust&#x27;, err));
+			}
+
+			fs.stat(tempFile, function (err, stats) {
+				if (err) {
+					return cb(new gutil.PluginError(&#x27;gulp-cachebust&#x27;, err));
+				}
+				options = options || {};
+
+				fs.readFile(tempFile, { encoding : &#x27;UTF-8&#x27;}, function(err, data) {
+					if (err) {
+						return cb(new gutil.PluginError(&#x27;gulp-cachebust&#x27;, err));
+					}
+
+					// Call the Node module
+					var processedContents = cachebust.busted(data, options);
+
+					if (options.showLog) {
+						gutil.log(&#x27;gulp-cachebust:&#x27;, gutil.colors.green(&#x27;✔ &#x27;) + file.relative);
+					}
+
+					file.contents = new Buffer(processedContents);
+
+					cb(null, file);
+				});
+
+			});
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

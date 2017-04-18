@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/furzeface/gulp-cache-bust#readme"
-
-    >gulp-cache-bust (v1.1.0)</a>
+    <a href="https://github.com/furzeface/gulp-cache-bust#readme">gulp-cache-bust (v1.1.0)</a>
 </h1>
 <h4>Append a query string to your assets to bust that cache!</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-cache-bust">module gulp-cache-bust</a><ol>
 
@@ -95,34 +88,34 @@
 		}
 
 		if (file.isStream()) {
-			return cb(new gutil.PluginError(&#x27;gulp-cachebust&#x27;, &#x27;Streaming not supported&#x27;));
+			return cb(new gutil.PluginError('gulp-cachebust', 'Streaming not supported'));
 		}
 		if(!options.basePath){
-			options.basePath = path.dirname(path.resolve(file.path))+&#x27;/&#x27;;
+			options.basePath = path.dirname(path.resolve(file.path))+'/';
 		}
 
 		tempWrite(file.contents, path.extname(file.path))
 		.then(function (tempFile, err) {
 			if (err) {
-				return cb(new gutil.PluginError(&#x27;gulp-cachebust&#x27;, err));
+				return cb(new gutil.PluginError('gulp-cachebust', err));
 			}
 
 			fs.stat(tempFile, function (err, stats) {
 				if (err) {
-					return cb(new gutil.PluginError(&#x27;gulp-cachebust&#x27;, err));
+					return cb(new gutil.PluginError('gulp-cachebust', err));
 				}
 				options = options || {};
 
-				fs.readFile(tempFile, { encoding : &#x27;UTF-8&#x27;}, function(err, data) {
+				fs.readFile(tempFile, { encoding : 'UTF-8'}, function(err, data) {
 					if (err) {
-						return cb(new gutil.PluginError(&#x27;gulp-cachebust&#x27;, err));
+						return cb(new gutil.PluginError('gulp-cachebust', err));
 					}
 
 					// Call the Node module
 					var processedContents = cachebust.busted(data, options);
 
 					if (options.showLog) {
-						gutil.log(&#x27;gulp-cachebust:&#x27;, gutil.colors.green(&#x27;✔ &#x27;) + file.relative);
+						gutil.log('gulp-cachebust:', gutil.colors.green('âœ” ') + file.relative);
 					}
 
 					file.contents = new Buffer(processedContents);
@@ -146,3 +139,4 @@
     ]
 </div>
 </div>
+</body></html>
