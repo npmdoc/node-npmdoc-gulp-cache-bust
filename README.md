@@ -1,9 +1,14 @@
-# api documentation for  [gulp-cache-bust (v1.1.0)](https://github.com/furzeface/gulp-cache-bust#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-cache-bust.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-cache-bust) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-cache-bust.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-cache-bust)
+# npmdoc-gulp-cache-bust
+
+#### api documentation for  [gulp-cache-bust (v1.1.0)](https://github.com/furzeface/gulp-cache-bust#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-cache-bust.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-cache-bust) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-cache-bust.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-cache-bust)
+
 #### Append a query string to your assets to bust that cache!
 
-[![NPM](https://nodei.co/npm/gulp-cache-bust.png?downloads=true)](https://www.npmjs.com/package/gulp-cache-bust)
+[![NPM](https://nodei.co/npm/gulp-cache-bust.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-cache-bust)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-cache-bust/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-cache-bust_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-cache-bust/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-cache-bust/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-cache-bust/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-cache-bust/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-cache-bust/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-cache-bust/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Daniel Furze",
-        "email": "daniel@furzeface.com",
         "url": "https://github.com/furzeface"
     },
     "bugs": {
@@ -64,17 +68,14 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "davinkevin",
-            "email": "davin.kevin@gmail.com"
+            "name": "davinkevin"
         },
         {
-            "name": "furzeface",
-            "email": "daniel@furzeface.com"
+            "name": "furzeface"
         }
     ],
     "name": "gulp-cache-bust",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/furzeface/gulp-cache-bust.git"
@@ -86,16 +87,6 @@
     "version": "1.1.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-cache-bust](#apidoc.module.gulp-cache-bust)
-
-
-
-# <a name="apidoc.module.gulp-cache-bust"></a>[module gulp-cache-bust](#apidoc.module.gulp-cache-bust)
 
 
 
