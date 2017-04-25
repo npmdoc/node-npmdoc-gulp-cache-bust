@@ -1,6 +1,6 @@
 # npmdoc-gulp-cache-bust
 
-#### api documentation for  [gulp-cache-bust (v1.1.0)](https://github.com/furzeface/gulp-cache-bust#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-cache-bust.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-cache-bust) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-cache-bust.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-cache-bust)
+#### basic api documentation for  [gulp-cache-bust (v1.1.0)](https://github.com/furzeface/gulp-cache-bust#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-cache-bust.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-cache-bust) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-cache-bust.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-cache-bust)
 
 #### Append a query string to your assets to bust that cache!
 
@@ -84,7 +84,8 @@
         "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
         "test": "istanbul test _mocha --report html -- test/*.js --reporter spec"
     },
-    "version": "1.1.0"
+    "version": "1.1.0",
+    "bin": {}
 }
 ```
 
